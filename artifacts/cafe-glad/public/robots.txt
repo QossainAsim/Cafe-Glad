@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+# TODO: Replace OWNER-DOMAIN-NEEDED with the cafe's verified production domain before launch.
+# Sitemap: https://OWNER-DOMAIN-NEEDED/sitemap.xml

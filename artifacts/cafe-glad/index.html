@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Café GLAD Aarhus | Hjemmelavet mad &amp; takeaway</title>
+    <meta name="description" content="Mad, der gør dig GLAD. Økologisk, hjemmelavet mad, kaffe og takeaway på Frederiks Allé i Aarhus C." />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Café GLAD" />
+    <meta property="og:description" content="Økologisk, hjemmelavet mad, kaffe og takeaway på Frederiks Allé i Aarhus C." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/images/food-feature.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Café GLAD" />
+    <meta name="twitter:description" content="Økologisk, hjemmelavet mad, kaffe og takeaway på Frederiks Allé i Aarhus C." />
+    <meta name="twitter:image" content="/images/food-feature.webp" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script>
+      const gladUrl = new URL(window.location.pathname, window.location.origin).href;
+      const gladCanonical = document.createElement('link');
+      gladCanonical.rel = 'canonical';
+      gladCanonical.href = gladUrl;
+      document.head.appendChild(gladCanonical);
+      const gladOgUrl = document.createElement('meta');
+      gladOgUrl.setAttribute('property', 'og:url');
+      gladOgUrl.content = gladUrl;
+      document.head.appendChild(gladOgUrl);
+      document.querySelector('meta[property="og:image"]').content = new URL('/images/food-feature.webp', window.location.origin).href;
+      document.querySelector('meta[name="twitter:image"]').content = new URL('/images/food-feature.webp', window.location.origin).href;
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Café GLAD",
+        "telephone": "+45 61 42 77 33",
+        "email": "adm.gladcafe@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Frederiks Allé 127",
+          "postalCode": "8000",
+          "addressLocality": "Aarhus C",
+          "addressCountry": "DK"
+        },
+        "openingHoursSpecification": [{
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "09:00",
+          "closes": "19:00"
+        }]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

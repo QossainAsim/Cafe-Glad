@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Café GLAD"
+description = "A warm, mobile-first website for Café GLAD in Aarhus, with its menu, takeaway and catering information, location details, and direct customer actions."
+version = "1.0.0"
+id = "artifacts/cafe-glad"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18973
+
+[services.development]
+run = "pnpm --filter @workspace/cafe-glad run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/cafe-glad", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/cafe-glad/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18973"
+BASE_PATH = "/"
